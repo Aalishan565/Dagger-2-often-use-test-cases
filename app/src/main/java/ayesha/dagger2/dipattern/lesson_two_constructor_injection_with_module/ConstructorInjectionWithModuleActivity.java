@@ -9,6 +9,8 @@ import javax.inject.Inject;
 import ayesha.dagger2.R;
 
 public class ConstructorInjectionWithModuleActivity extends AppCompatActivity {
+
+    // Want to inject ticket which is not local or it is not accessible for modification or some 3rd party
     @Inject
     TicketRepository ticketRepository;
 
@@ -17,6 +19,7 @@ public class ConstructorInjectionWithModuleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_construction_injection_with_module);
 
+        // Initializing the ticket obj
         DaggerTicketComponent.create().inject(this);
         showToast(ticketRepository.getTickets());
     }

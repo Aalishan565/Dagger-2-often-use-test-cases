@@ -10,6 +10,7 @@ import ayesha.dagger2.R;
 
 public class FieldInjectionActivity extends AppCompatActivity {
 
+    //Field which we want to inject
     @Inject
     MainViewModel mainViewModel;
 
@@ -17,6 +18,7 @@ public class FieldInjectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_field_injection);
+        // Getting MainViewModel dependency created
         DaggerMainViewModelComponent.create().inject(this);
         showToast(mainViewModel.getMessage());
     }

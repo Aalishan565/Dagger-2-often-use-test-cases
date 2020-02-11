@@ -12,6 +12,7 @@ public class ConstructorInjectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_constructor_injection);
+        // Getting car instance here
         Car car = DaggerCarComponent.create().getCar();
         showToast(car.run());
     }

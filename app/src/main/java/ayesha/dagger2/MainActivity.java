@@ -1,33 +1,48 @@
 package ayesha.dagger2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.Button;
 
-import javax.inject.Inject;
+import ayesha.dagger2.dipattern.lesson_one_constructor_injection.ConstructorInjectionActivity;
+import ayesha.dagger2.dipattern.lesson_three_field_injection.FieldInjectionActivity;
+import ayesha.dagger2.dipattern.lesson_two_constructor_injection_with_module.ConstructorInjectionWithModuleActivity;
 
-import ayesha.dagger2.dipattern.lesson_one.Car;
-import ayesha.dagger2.dipattern.lesson_one.DaggerCarComponent;
-import ayesha.dagger2.dipattern.lesson_two.DaggerTicketComponent;
-import ayesha.dagger2.dipattern.lesson_two.TicketRepository;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-public class MainActivity extends AppCompatActivity {
-
-    @Inject
-    TicketRepository ticketRepository;
+    private Button btnConstructionInjection;
+    private Button btnConstructionInjectionWithModule;
+    private Button btnFieldInjection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        DaggerTicketComponent.create().inject(this);
-        Car car = DaggerCarComponent.create().getCar();
-        Log.d("Car", "onCreate: car" + car.run());
-        showToast(ticketRepository);
+
+        btnConstructionInjection = findViewById(R.id.btnConstructionInjection);
+        btnConstructionInjectionWithModule = findViewById(R.id.btnConstructionInjectionWithModule);
+        btnFieldInjection = findViewById(R.id.btnFieldInjection);
+
+        btnConstructionInjection.setOnClickListener(this);
+        btnConstructionInjectionWithModule.setOnClickListener(this);
+        btnFieldInjection.setOnClickListener(this);
     }
 
-    private void showToast(TicketRepository ticketRepository) {
-        Toast.makeText(this, ticketRepository.getTickets(), Toast.LENGTH_LONG).show();
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btnConstructionInjection:
+                startActivity(new Intent(this, ConstructorInjectionActivity.class));
+                break;
+            case R.id.btnConstructionInjectionWithModule:
+                startActivity(new Intent(this, ConstructorInjectionWithModuleActivity.class));
+                break;
+            case R.id.btnFieldInjection:
+                startActivity(new Intent(this, FieldInjectionActivity.class));
+                break;
+        }
+
     }
 }

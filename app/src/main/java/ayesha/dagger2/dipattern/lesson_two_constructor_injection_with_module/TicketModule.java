@@ -1,4 +1,4 @@
-package ayesha.dagger2.dipattern.lesson_two;
+package ayesha.dagger2.dipattern.lesson_two_constructor_injection_with_module;
 
 import dagger.Module;
 import dagger.Provides;

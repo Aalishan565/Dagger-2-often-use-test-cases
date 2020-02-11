@@ -1,4 +1,4 @@
-package ayesha.dagger2.dipattern.lesson_one;
+package ayesha.dagger2.dipattern.lesson_one_constructor_injection;
 
 import javax.inject.Inject;
 

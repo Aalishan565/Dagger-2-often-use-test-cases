@@ -1,9 +1,7 @@
-package ayesha.dagger2;
-
-import javax.inject.Inject;
+package ayesha.dagger2.dipattern.lesson_two;
 
 public class TicketRepository {
-    @Inject
+
     public TicketRepository() {
     }
 

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".dipattern.lesson_three_field_injection.FieldInjectionActivity"></activity>
+        <activity android:name=".dipattern.lesson_four_binds.BindActivity"></activity>
+        <activity android:name=".dipattern.lesson_three_field_injection.FieldInjectionActivity" />
         <activity android:name=".dipattern.lesson_two_constructor_injection_with_module.ConstructorInjectionWithModuleActivity" />
         <activity android:name=".dipattern.lesson_one_constructor_injection.ConstructorInjectionActivity" />
         <activity android:name=".MainActivity">

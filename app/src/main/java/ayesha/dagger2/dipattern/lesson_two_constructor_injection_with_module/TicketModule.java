@@ -9,7 +9,7 @@ public class TicketModule {
 
     // Create a provide method which will give the instance of Ticket repo
     @Provides
-    public TicketRepository getTicketRepo() {
+    public static TicketRepository getTicketRepo() {
         return new TicketRepository();
     }
 }

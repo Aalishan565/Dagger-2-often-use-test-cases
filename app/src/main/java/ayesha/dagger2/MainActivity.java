@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import ayesha.dagger2.dipattern.lesson_four_binds.BindActivity;
 import ayesha.dagger2.dipattern.lesson_one_constructor_injection.ConstructorInjectionActivity;
 import ayesha.dagger2.dipattern.lesson_three_field_injection.FieldInjectionActivity;
 import ayesha.dagger2.dipattern.lesson_two_constructor_injection_with_module.ConstructorInjectionWithModuleActivity;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnConstructionInjection;
     private Button btnConstructionInjectionWithModule;
     private Button btnFieldInjection;
+    private Button btnBindInjection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +26,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnConstructionInjection = findViewById(R.id.btnConstructionInjection);
         btnConstructionInjectionWithModule = findViewById(R.id.btnConstructionInjectionWithModule);
         btnFieldInjection = findViewById(R.id.btnFieldInjection);
+        btnBindInjection = findViewById(R.id.btnBindInjection);
 
         btnConstructionInjection.setOnClickListener(this);
         btnConstructionInjectionWithModule.setOnClickListener(this);
         btnFieldInjection.setOnClickListener(this);
+        btnBindInjection.setOnClickListener(this);
     }
 
     @Override
@@ -41,6 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnFieldInjection:
                 startActivity(new Intent(this, FieldInjectionActivity.class));
+                break;
+                case R.id.btnBindInjection:
+                startActivity(new Intent(this, BindActivity.class));
                 break;
         }
 

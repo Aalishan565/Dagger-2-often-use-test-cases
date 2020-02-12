@@ -8,7 +8,7 @@ import javax.inject.Inject;
 
 import ayesha.dagger2.R;
 
-public class ConstructorInjectionWithModuleActivity extends AppCompatActivity {
+public class LessonTwoActivity extends AppCompatActivity {
 
     // Want to inject ticket which is not local or it is not accessible for modification or some 3rd party
     @Inject

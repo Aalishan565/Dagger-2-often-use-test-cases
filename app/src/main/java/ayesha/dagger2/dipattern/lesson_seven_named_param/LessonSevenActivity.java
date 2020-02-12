@@ -8,17 +8,17 @@ import javax.inject.Inject;
 
 import ayesha.dagger2.R;
 
-public class NamedParamsActivity extends AppCompatActivity {
+public class LessonSevenActivity extends AppCompatActivity {
 
     @Inject
-    public Run run;
+    public Login login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_named_params_dependency);
-        DaggerRunComponent.builder().setRunner("ComponentBuilderDependencyActivity").setSpeed("100").build().inject(this);
-        showToast(run.objRunning());
+        DaggerLoginComponent.builder().setUserName("Aalishan ").setPassword("Ansari").build().inject(this);
+        showToast(login.getUserInfo());
     }
 
     private void showToast(String message) {

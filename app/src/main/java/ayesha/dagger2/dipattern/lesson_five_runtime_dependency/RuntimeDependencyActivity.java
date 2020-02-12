@@ -7,19 +7,18 @@ import android.widget.Toast;
 import javax.inject.Inject;
 
 import ayesha.dagger2.R;
-import dagger.Provides;
 
 public class RuntimeDependencyActivity extends AppCompatActivity {
 
     @Inject
-    public Run run;
+    public PrintMessage printMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_runtime_dependency);
-        DaggerRunComponent.builder().runModule(new RunModule("Car is running..")).build().inject(this);
-        showToast(run.objRunning());
+        DaggerPrintMessageComponent.builder().runModule(new RunModule("Give My message to print ..")).build().inject(this);
+        showToast(printMessage.printMessage());
     }
 
     private void showToast(String message) {

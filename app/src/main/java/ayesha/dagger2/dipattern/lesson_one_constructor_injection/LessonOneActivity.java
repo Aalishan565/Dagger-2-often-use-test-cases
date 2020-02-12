@@ -6,7 +6,7 @@ import android.widget.Toast;
 
 import ayesha.dagger2.R;
 
-public class ConstructorInjectionActivity extends AppCompatActivity {
+public class LessonOneActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

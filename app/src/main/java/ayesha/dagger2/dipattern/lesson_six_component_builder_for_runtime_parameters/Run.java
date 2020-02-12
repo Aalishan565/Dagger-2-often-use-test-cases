@@ -2,13 +2,13 @@ package ayesha.dagger2.dipattern.lesson_six_component_builder_for_runtime_parame
 
 public class Run {
 
-    private String obj;
+    private String runner;
 
-    public Run(String obj) {
-        this.obj = obj;
+    public Run(String runner) {
+        this.runner = runner;
     }
 
-    String objRunning() {
-        return obj;
+    String whoIsRunning() {
+        return runner;
     }
 }

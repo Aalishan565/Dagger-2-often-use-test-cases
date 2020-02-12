@@ -8,19 +8,19 @@ import javax.inject.Inject;
 
 import ayesha.dagger2.R;
 
-public class FieldInjectionActivity extends AppCompatActivity {
+public class LessonThreeActivity extends AppCompatActivity {
 
     //Field which we want to inject
     @Inject
-    MainViewModel mainViewModel;
+    Message message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_field_injection);
-        // Getting MainViewModel dependency created
-        DaggerMainViewModelComponent.create().inject(this);
-        showToast(mainViewModel.getMessage());
+        // Getting Message dependency created
+        DaggerMessageComponent.create().inject(this);
+        showToast(message.getMessage());
     }
 
     private void showToast(String message) {

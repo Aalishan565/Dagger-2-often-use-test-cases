@@ -8,7 +8,7 @@ import javax.inject.Inject;
 
 import ayesha.dagger2.R;
 
-public class BindActivity extends AppCompatActivity {
+public class LessonFourActivity extends AppCompatActivity {
 
     @Inject
     Connection connection;

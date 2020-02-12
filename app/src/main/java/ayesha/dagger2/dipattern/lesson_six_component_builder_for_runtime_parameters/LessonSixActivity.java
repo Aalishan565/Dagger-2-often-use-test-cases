@@ -8,7 +8,7 @@ import javax.inject.Inject;
 
 import ayesha.dagger2.R;
 
-public class ComponentBuilderDependencyActivity extends AppCompatActivity {
+public class LessonSixActivity extends AppCompatActivity {
 
     @Inject
     public Run run;
@@ -17,8 +17,8 @@ public class ComponentBuilderDependencyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_component_runtime_dependency);
-        DaggerRunComponent.builder().setRunner("ComponentBuilderDependencyActivity").build().inject(this);
-        showToast(run.objRunning());
+        DaggerRunComponent.builder().setRunner("Aalishan is running").build().inject(this);
+        showToast(run.whoIsRunning());
     }
 
     private void showToast(String message) {

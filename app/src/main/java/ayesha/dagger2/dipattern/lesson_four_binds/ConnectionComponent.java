@@ -5,5 +5,5 @@ import dagger.Component;
 @Component(modules = RealConnectionModule.class)
 public interface ConnectionComponent {
 
-    void inject(BindActivity bindActivity);
+    void inject(LessonFourActivity lessonFourActivity);
 }

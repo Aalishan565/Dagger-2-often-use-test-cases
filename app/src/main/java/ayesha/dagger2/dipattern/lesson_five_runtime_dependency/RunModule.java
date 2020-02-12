@@ -13,7 +13,7 @@ public class RunModule {
     }
 
     @Provides
-    public Run provideRun() {
-        return new Run(obj);
+    public PrintMessage provideRun() {
+        return new PrintMessage(obj);
     }
 }

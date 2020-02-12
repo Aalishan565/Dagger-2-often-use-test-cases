@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import ayesha.dagger2.dipattern.lesson_eight_method_injection.LessonEightActivity;
 import ayesha.dagger2.dipattern.lesson_five_runtime_dependency.RuntimeDependencyActivity;
 import ayesha.dagger2.dipattern.lesson_four_binds.LessonFourActivity;
 import ayesha.dagger2.dipattern.lesson_one_constructor_injection.LessonOneActivity;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnRuntimeInjection;
     private Button btnRuntimeComponentInjection;
     private Button btnNamedInjection;
+    private Button btnMethodInjection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnRuntimeInjection = findViewById(R.id.btnRuntimeInjection);
         btnRuntimeComponentInjection = findViewById(R.id.btnRuntimeComponentInjection);
         btnNamedInjection = findViewById(R.id.btnNamedInjection);
+        btnMethodInjection = findViewById(R.id.btnMethodInjection);
 
         btnConstructionInjection.setOnClickListener(this);
         btnConstructionInjectionWithModule.setOnClickListener(this);
@@ -44,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnRuntimeInjection.setOnClickListener(this);
         btnRuntimeComponentInjection.setOnClickListener(this);
         btnNamedInjection.setOnClickListener(this);
+        btnMethodInjection.setOnClickListener(this);
     }
 
     @Override
@@ -64,11 +68,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnRuntimeInjection:
                 startActivity(new Intent(this, RuntimeDependencyActivity.class));
                 break;
-                case R.id.btnRuntimeComponentInjection:
+            case R.id.btnRuntimeComponentInjection:
                 startActivity(new Intent(this, LessonSixActivity.class));
                 break;
-                case R.id.btnNamedInjection:
+            case R.id.btnNamedInjection:
                 startActivity(new Intent(this, LessonSevenActivity.class));
+                break;
+            case R.id.btnMethodInjection:
+                startActivity(new Intent(this, LessonEightActivity.class));
                 break;
         }
 

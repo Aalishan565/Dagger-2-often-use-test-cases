@@ -9,6 +9,8 @@ import android.widget.Button;
 import ayesha.dagger2.dipattern.lesson_five_runtime_dependency.RuntimeDependencyActivity;
 import ayesha.dagger2.dipattern.lesson_four_binds.BindActivity;
 import ayesha.dagger2.dipattern.lesson_one_constructor_injection.ConstructorInjectionActivity;
+import ayesha.dagger2.dipattern.lesson_seven_named_param.NamedParamsActivity;
+import ayesha.dagger2.dipattern.lesson_six_component_builder_for_runtime_parameters.ComponentBuilderDependencyActivity;
 import ayesha.dagger2.dipattern.lesson_three_field_injection.FieldInjectionActivity;
 import ayesha.dagger2.dipattern.lesson_two_constructor_injection_with_module.ConstructorInjectionWithModuleActivity;
 
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnFieldInjection;
     private Button btnBindInjection;
     private Button btnRuntimeInjection;
+    private Button btnRuntimeComponentInjection;
+    private Button btnNamedInjection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +34,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnFieldInjection = findViewById(R.id.btnFieldInjection);
         btnBindInjection = findViewById(R.id.btnBindInjection);
         btnRuntimeInjection = findViewById(R.id.btnRuntimeInjection);
+        btnRuntimeComponentInjection = findViewById(R.id.btnRuntimeComponentInjection);
+        btnNamedInjection = findViewById(R.id.btnNamedInjection);
 
         btnConstructionInjection.setOnClickListener(this);
         btnConstructionInjectionWithModule.setOnClickListener(this);
         btnFieldInjection.setOnClickListener(this);
         btnBindInjection.setOnClickListener(this);
         btnRuntimeInjection.setOnClickListener(this);
+        btnRuntimeComponentInjection.setOnClickListener(this);
+        btnNamedInjection.setOnClickListener(this);
     }
 
     @Override
@@ -55,6 +63,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnRuntimeInjection:
                 startActivity(new Intent(this, RuntimeDependencyActivity.class));
+                break;
+                case R.id.btnRuntimeComponentInjection:
+                startActivity(new Intent(this, ComponentBuilderDependencyActivity.class));
+                break;
+                case R.id.btnNamedInjection:
+                startActivity(new Intent(this, NamedParamsActivity.class));
                 break;
         }
 

@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".dipattern.lesson_seven_named_param.NamedParamsActivity"></activity>
+        <activity android:name=".dipattern.lesson_six_component_builder_for_runtime_parameters.ComponentBuilderDependencyActivity"></activity>
         <activity android:name=".dipattern.lesson_five_runtime_dependency.RuntimeDependencyActivity"></activity>
         <activity android:name=".dipattern.lesson_four_binds.BindActivity" />
         <activity android:name=".dipattern.lesson_three_field_injection.FieldInjectionActivity" />

@@ -13,7 +13,7 @@
         <activity android:name=".dipattern.lesson_eight_method_injection.LessonEightActivity" />
         <activity android:name=".dipattern.lesson_seven_named_param.LessonSevenActivity" />
         <activity android:name=".dipattern.lesson_six_component_builder_for_runtime_parameters.LessonSixActivity" />
-        <activity android:name=".dipattern.lesson_five_runtime_dependency.RuntimeDependencyActivity" />
+        <activity android:name=".dipattern.lesson_five_runtime_dependency.LessonFiveActivity" />
         <activity android:name=".dipattern.lesson_four_binds.LessonFourActivity" />
         <activity android:name=".dipattern.lesson_three_field_injection.LessonThreeActivity" />
         <activity android:name=".dipattern.lesson_two_constructor_injection_with_module.LessonTwoActivity" />

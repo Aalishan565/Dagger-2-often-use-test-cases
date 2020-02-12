@@ -17,7 +17,7 @@ public class LessonThreeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_field_injection);
+        setContentView(R.layout.activity_lesson_three);
         // Getting Message dependency created
         DaggerMessageComponent.create().inject(this);
         showToast(message.getMessage());

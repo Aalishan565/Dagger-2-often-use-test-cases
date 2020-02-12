@@ -16,7 +16,7 @@ public class LessonSixActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_component_runtime_dependency);
+        setContentView(R.layout.activity_lesson_six);
         DaggerRunComponent.builder().setRunner("Aalishan is running").build().inject(this);
         showToast(run.whoIsRunning());
     }

@@ -17,7 +17,7 @@ public class LessonTwoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_construction_injection_with_module);
+        setContentView(R.layout.activity_lesson_two);
 
         // Initializing the ticket obj
         DaggerTicketComponent.create().inject(this);

@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import ayesha.dagger2.dipattern.lesson_eight_method_injection.LessonEightActivity;
-import ayesha.dagger2.dipattern.lesson_five_runtime_dependency.RuntimeDependencyActivity;
+import ayesha.dagger2.dipattern.lesson_five_runtime_dependency.LessonFiveActivity;
 import ayesha.dagger2.dipattern.lesson_four_binds.LessonFourActivity;
 import ayesha.dagger2.dipattern.lesson_nine_singleton.LessonNineActivity;
 import ayesha.dagger2.dipattern.lesson_one_constructor_injection.LessonOneActivity;
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, LessonFourActivity.class));
                 break;
             case R.id.btnRuntimeInjection:
-                startActivity(new Intent(this, RuntimeDependencyActivity.class));
+                startActivity(new Intent(this, LessonFiveActivity.class));
                 break;
             case R.id.btnRuntimeComponentInjection:
                 startActivity(new Intent(this, LessonSixActivity.class));
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnMethodInjection:
                 startActivity(new Intent(this, LessonEightActivity.class));
                 break;
-                case R.id.btnSingleton:
+            case R.id.btnSingleton:
                 startActivity(new Intent(this, LessonNineActivity.class));
                 break;
         }

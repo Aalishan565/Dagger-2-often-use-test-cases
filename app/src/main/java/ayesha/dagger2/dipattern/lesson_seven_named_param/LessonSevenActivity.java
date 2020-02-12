@@ -16,7 +16,7 @@ public class LessonSevenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_named_params_dependency);
+        setContentView(R.layout.activity_lesson_seven);
         DaggerLoginComponent.builder().setUserName("Aalishan ").setPassword("Ansari").build().inject(this);
         showToast(login.getUserInfo());
     }

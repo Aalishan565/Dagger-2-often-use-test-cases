@@ -11,7 +11,7 @@ public class LessonOneActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_constructor_injection);
+        setContentView(R.layout.activity_lesson_one);
         // Getting car instance here
         Car car = DaggerCarComponent.create().getCar();
         showToast(car.run());

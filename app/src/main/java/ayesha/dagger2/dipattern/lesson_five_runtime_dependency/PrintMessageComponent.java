@@ -5,5 +5,5 @@ import dagger.Component;
 @Component(modules = RunModule.class)
 public interface PrintMessageComponent {
 
-    void inject(RuntimeDependencyActivity runtimeDependencyActivity);
+    void inject(LessonFiveActivity lessonFiveActivity);
 }

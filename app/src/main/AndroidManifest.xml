@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".dipattern.lesson_nine_singleton.LessonNineActivity"></activity>
+        <activity android:name=".dipattern.facade_pattern.FacadePatternActivity"></activity>
+        <activity android:name=".dipattern.lesson_nine_singleton.LessonNineActivity" />
         <activity android:name=".dipattern.lesson_eight_method_injection.LessonEightActivity" />
         <activity android:name=".dipattern.lesson_seven_named_param.LessonSevenActivity" />
         <activity android:name=".dipattern.lesson_six_component_builder_for_runtime_parameters.LessonSixActivity" />

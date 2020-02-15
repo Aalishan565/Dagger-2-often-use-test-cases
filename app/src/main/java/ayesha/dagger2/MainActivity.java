@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import ayesha.dagger2.dipattern.facade_pattern.FacadePatternActivity;
 import ayesha.dagger2.dipattern.lesson_eight_method_injection.LessonEightActivity;
 import ayesha.dagger2.dipattern.lesson_five_runtime_dependency.LessonFiveActivity;
 import ayesha.dagger2.dipattern.lesson_four_binds.LessonFourActivity;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnNamedInjection;
     private Button btnMethodInjection;
     private Button btnSingleton;
+    private Button btnFacade;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnNamedInjection = findViewById(R.id.btnNamedInjection);
         btnMethodInjection = findViewById(R.id.btnMethodInjection);
         btnSingleton = findViewById(R.id.btnSingleton);
+        btnFacade = findViewById(R.id.btnFacade);
 
         btnConstructionInjection.setOnClickListener(this);
         btnConstructionInjectionWithModule.setOnClickListener(this);
@@ -52,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnNamedInjection.setOnClickListener(this);
         btnMethodInjection.setOnClickListener(this);
         btnSingleton.setOnClickListener(this);
+        btnFacade.setOnClickListener(this);
     }
 
     @Override
@@ -83,6 +87,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnSingleton:
                 startActivity(new Intent(this, LessonNineActivity.class));
+                break;
+            case R.id.btnFacade:
+                startActivity(new Intent(this, FacadePatternActivity.class));
                 break;
         }
 
